@@ -3,7 +3,8 @@ import random
 sum = 0
 games = 100
 small = medium = large = 9 #not necessary
-box = ring_size = 3
+box = 9
+ring_size = 3
 
 #for same size
 def sameSize(table):
