@@ -27,16 +27,15 @@ def Probability(whole_text, length, characters):
     # print(prob)
     return probability
 
-def Entropy(characters, whole_text):
+def Entropy(whole_text, characters):
     entropy = 0
     length = len(whole_text)
-    for characters in characters:
-        probability = Probability(whole_text, length, characters)
+    for character in characters:
+        probability = Probability(whole_text, length, character)
         entropy -= (probability * math.log(probability, 2))
     return entropy
-entropy=Entropy(characters, whole_text)
-a = int(entropy)
-b = ("%.2f" % a)
+entropy=Entropy(whole_text, characters)
+a = ("{:.2f}".format(entropy))
 
 print("Entropy is: " + str(entropy))
-print("Entropy(rounded) is: "+  str(b))
+print("Entropy(rounded) is: " +  str(a))
